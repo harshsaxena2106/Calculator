@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        * 
+        {
+            
+            margin:5px;
+            padding:0%;
+            box-sizing:border-box;
+           
+        }
+
+         .uppertext
+        
+        {
+            display: flex;
+            justify-content:center ;
+            font-weight:bold;
+            color:green;
+            font-family:sans-serif;
+        }
+
+        .uppertext2
+        
+        {
+            display: flex;
+            justify-content:center ;
+            font-weight:bold;
+            color:rgb(255, 255, 255);
+            font-family:sans-serif;
+            margin-top:34px;
+        }
+
+        
+         #line
+        {
+            height:10px;
+            background-color:rgb(29, 203, 41);
+            border:none;
+            margin-top:20px;
+            width:43%;
+            border-radius:6px;
+
+        }
+        
+        .othdiv
+        {
+          display: flex;
+          justify-content: center;
+        }
+
+        .pardiv
+        {
+            display:flex;
+            justify-content: center;
+        }
+
+        .caldiv
+        {
+            width:500px;
+            height:600px;
+            background-color:rgb(10, 183, 44);
+            border-radius: 4%;
+            margin-top:20px;
+            
+            
+        }
+
+        #answerbox
+        {
+            height:70px;
+            background-color:white;
+            width: 460px;
+            border-radius:7px;
+            margin-top:15px;
+            border-style:solid;
+            border-width:3px;
+            border-color:rgb(4, 4, 4);
+            text-align: center;
+            color:red;
+            font-size:40px;
+            font-weight: bold;
+            font-family: sans-serif;
+            line-height:70px;  
+        }
+
+        .form
+        {
+            display: flex;
+            gap:30px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        #c1
+
+        {
+            width:210px;
+            height:50px;
+            border-radius:7px;
+            border:none;
+            outline:none;
+            text-align: center;
+            font-size:20px;
+            color:rgb(232, 60, 60);
+            font-weight: bold; 
+            border-style:solid;
+            border-width:3px;
+            border-color:rgb(4, 4, 4);
+        }
+
+        #c2
+
+        {
+            width:210px;
+            height:50px;
+            border-radius:7px;
+            border:none;
+            outline:none;
+            text-align: center;
+            font-size:20px;
+            color:rgb(232, 60, 60);
+            font-weight: bold;
+            border-style:solid;
+            border-width:3px;
+            border-color:rgb(4, 4, 4);
+        }
+
+        .b1
+        {
+            width:180px;
+            height:60px;
+            border-radius:20px;
+            color:rgb(20, 189, 205);
+            font-weight: bold;
+            font-size: large;
+            border:none;
+            border-style:solid;
+            border-width:5px;
+            border-color:black;
+           
+
+
+        }
+
+       .b2
+        {
+            width:180px;
+            height:60px;
+            border-radius:20px;
+            color:rgb(20, 189, 205);
+            font-weight: bold;
+            font-size: large;
+            border:none;
+            border-style:solid;
+            border-width:5px;
+            border-color:black;
+
+            
+            
+        }
+
+       .b3
+        {
+            width:180px;
+            height:60px;
+            border-radius:20px;
+            color:rgb(20, 189, 205);
+            font-weight: bold;
+            font-size: large;
+            border:none;
+            border-style:solid;
+            border-width:5px;
+            border-color:black;
+
+
+
+            
+        }
+
+       .b4
+        {
+            width:180px;
+            height:60px;
+            border-radius:20px;
+            color:rgb(20, 189, 205);
+            font-weight: bold;
+            font-size: large;
+            border:none;
+            border-style:solid;
+            border-width:5px;
+            border-color:black;
+
+
+        }
+
+        .b5
+        {
+           width:180px;
+            height:60px;
+            border-radius:20px;
+            color:rgb(20, 189, 205);
+            font-weight: bold;
+            font-size: large;
+            border:none;
+            border-style:solid;
+            border-width:5px;
+            border-color:black;
+
+
+        }
+
+        .br6
+        {
+            width:180px;
+            height:60px;
+            border-radius:20px;
+            color:rgb(20, 189, 205);
+            font-weight: bold;
+            font-size: large;
+            border:none;
+            border-style:solid;
+            border-width:5px;
+            border-color:black;
+
+        }
+
+
+    </style>
+</head>
+<body>
+    
+    <h1 class="uppertext">Arthmatic Operator looks like Calculator</h1>
+    <div class="othdiv">
+    <hr id="line">
+    </div>
+
+
+
+    <div class="pardiv">
+    <div class="caldiv">
+        <h1 class="uppertext2">Harsh's Calculator</h1>
+        <form class="form">
+            <div id="answerbox"></div>
+            <input type="number" name="First Number" placeholder="First Number" id="c1">
+            <input type="number" namr="Second Number" placeholder="Second Number" id="c2">
+            <button class="b1" onclick="return add()">Add(+)</button>
+            <button class="b2" onclick="return sub()">Subtract(-)</button>
+            <button class="b3" onclick="return mul()">Multiply(*)</button>
+            <button class="b4" onclick="return div()">Divide(/)</button>
+            <button class="b5" onclick="return rem()">Reminder(%)</button>
+            <input type="reset" name="reset" class="br6">
+        </form>
+    </div>
+    </div>
+
+    <script>
+
+        function add()
+        {
+            var w = document.getElementById("c1").value;
+            var x = document.getElementById("c2").value;
+            var y = Number(w) + Number(x);
+            var z = document.getElementById("answerbox");
+            z.innerHTML="Answer: "+y;
+            return false;
+
+        }
+
+        function sub()
+        {
+            var w = document.getElementById("c1").value;
+            var x = document.getElementById("c2").value;
+            var y = w-x;
+            var z = document.getElementById("answerbox");
+            z.innerHTML="Answer: "+y;
+            return false;
+            
+
+        }
+ 
+        function mul()
+        {
+            var w = document.getElementById("c1").value;
+            var x = document.getElementById("c2").value;
+            var y = w*x;
+            var z = document.getElementById("answerbox");
+            z.innerHTML="Answer: "+y;
+            return false;
+
+        }
+        function div()
+        {
+            var w = document.getElementById("c1").value;
+            var x = document.getElementById("c2").value;
+            var y = w/x;
+            var z = document.getElementById("answerbox");
+            z.innerHTML="Answer: "+y;
+            return false;
+
+        }
+
+        function rem()
+        {
+            var w = document.getElementById("c1").value;
+            var x = document.getElementById("c2").value;
+            var y = w%x;
+            var z = document.getElementById("answerbox");
+            z.innerHTML="Answer: "+y;
+            return false;
+
+        }
+
+
+
+
+
+    </script>
+</body>
+</html>
